@@ -12,8 +12,7 @@ def is_valid_email(email):
             else:
                 return False
         else:
-            return False 
-import json
+            return False
 main={}
 print("____________welcome to CRUD by dic_____________")
 while True:
@@ -28,11 +27,6 @@ while True:
             if str(phone).isnumeric()==True and len(str(phone))==10:
                 password=input("password--")   
                 dic={"name":name,"email":email,"phone":phone,"password":password}
-                
-                main.update({phone:dic})
-                x = json.dumps(main,indent=5)
-                with open("data.json",'w') as file:
-                    file.write(x)
             else:
                 print("oops incorrect way to enter phone no :(")  
         else:
