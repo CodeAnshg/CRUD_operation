@@ -60,7 +60,7 @@ while True:
                 x=json.load(file)
                 if phone1 in x and password1==x[phone1]["password"]:
                     # with open("myfile.json","r") as file:
-                    #   x=json.load(file)
+                    #   x=json.load(file,indent=5)
                     print(x[phone1])
                     break
                 else:
@@ -69,8 +69,6 @@ while True:
     elif choose=="3":
         print("please choose your updation \nname--1 \nemail--2 \nphone--3 \npassword--4")
         updation=input('--')
-        # with open("myfile.json","w") as file:
-        #         x=json.load(file)
         if updation=="1":
             while True:
                 user_id=input("input user phone no--")
@@ -113,7 +111,7 @@ while True:
         else:
             print('wrong choice :(')
         with open("myfile.json","w") as file:
-            json.dump(main,file)
+            json.dump(main,file,indent=5)
     elif choose=="4":
         print("please choose what you want deleted \nname--1 \nemail--2 \nphone--3 \npassword--4 \nDelete a user--5")
         choice=input('--')
@@ -135,7 +133,7 @@ while True:
             else:
                 print("enter correct choice :(")
             with open("myfile.json",'w') as file:
-                json.dump(x,file)
+                json.dump(x,indent=5)
         else:
             print("you entered wrong details :(")
     else:
